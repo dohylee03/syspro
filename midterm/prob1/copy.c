@@ -16,14 +16,12 @@ main(int argc, char *argv[])
 		exit(3);
 	}
 	for (int i = 0; i < 10; i++){
-			read((fd1, buf, 1));
+			a = read((fd1, buf, 1));
 			if (buf == 0){
 				break;
 			}
 			savedtext[i] = buf;
 	}
-	while((n = read(fd1, buf, BUFSIZ)) >0)
-		write(fd2, buf, n);
 	printf("%s\n", savedtext);
 	exit(0);
 }
